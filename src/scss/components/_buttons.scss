@@ -1,0 +1,78 @@
+.btn {
+  line-height: 3em;
+  background: var(--theme-color);
+  color: #fff;
+  padding: 0 1.5em;
+  &-second {
+    background: var(--theme-color2);
+  }
+}
+.Toggle {
+  $size: 2.5em;
+  $line-height: 2px;
+  color: currentColor;
+  height: $size;
+  width: $size;
+  position: relative;
+  cursor: pointer;
+  transition: all var(--animateDiration);
+  opacity: 1;
+
+  span {
+    position: absolute;
+    height: $line-height;
+    width: 70%;
+    background: currentColor;
+    left: 15%;
+    top: 50%;
+    transform-origin: center;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+  }
+
+  .span1 {
+    max-width: 70%;
+    top: 30%;
+  }
+
+  .span2 {
+    max-width: 40%;
+  }
+
+  .span3 {
+    max-width: 50%;
+    top: 70%;
+  }
+
+  &:hover {
+    .span1 {
+      max-width: 50%;
+    }
+
+    .span2 {
+      max-width: 70%;
+    }
+
+    .span3 {
+      max-width: 30%;
+    }
+  }
+
+  &.active {
+    .span1 {
+      max-width: 70%;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .span2 {
+      opacity: 0;
+    }
+
+    .span3 {
+      max-width: 70%;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}

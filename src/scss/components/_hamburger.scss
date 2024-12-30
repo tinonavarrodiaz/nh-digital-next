@@ -1,0 +1,25 @@
+.hamburger {
+  padding: 0;
+  scale: 0.75;
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+.hamburger:hover,
+.hamburger.is-active:hover {
+  opacity: 1;
+}
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+  background: currentColor;
+}
+
+.hamburger.is-active {
+  .hamburger-inner,
+  .hamburger-inner::after,
+  .hamburger-inner::before {
+    background: currentColor;
+  }
+}

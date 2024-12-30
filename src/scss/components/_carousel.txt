@@ -1,0 +1,24 @@
+@use '../mixins/mixins' as *;
+@use '../functions/functions' as *;
+.video-container {
+  position: relative;
+
+  max-width: 100%;
+  background: #000;
+  aspect-ratio: 16/9;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 16/9;
+}
+.carrousel-containt {
+  padding: get-vw(100px) 10%;
+  // background: lime;
+  @media screen and (max-width: 768px) {
+    padding: 20px 1em;
+  }
+}

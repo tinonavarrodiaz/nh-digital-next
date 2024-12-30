@@ -1,0 +1,47 @@
+@use '../mixins/mixins' as *;
+@use '../functions/functions' as *;
+
+$box-shadow: 0px 0px 8px rgba(#000, 0.3);
+$border: 1px solid var(--border-color-opacity);
+$rot: 30deg;
+$linear-gradient: linear-gradient(to right, #3264f5 2%, #7004bc 82%);
+$bdc: rgba(#fdfdfd, 0.2);
+:root {
+  --color-main: #3264f5;
+  --color-body: #fdfdfd;
+  --color-nav: transparent;
+  --color-nav-active: #03a9f5;
+  --color-main-dark: #0936b8;
+  --color-accent: rgb(85, 132, 255);
+  // --color-main-hover: #{darken(#3264f5, 10)};
+  --color-second: #f021b6;
+  // --color-second-hover: #{darken(#f021b6, 15)};
+  --color-third: #7004bc;
+  // --color-third-hover: #{darken(#7004bc, 15)};
+  --font-color: rgb(5, 5, 7);
+  // --body-font: 'Montserrat Alternates', serif;
+  --body-font: 'Montserrat', serif;
+  --heading-font: 'Roboto', sans-serif;
+  --header-color: linear-gradient(to right, #3264f5 2%, #7004bc 82%);
+
+  --social-size: 2em;
+  --animateDiration: 0.5s;
+  --header-height: 70px;
+  --z-back: -1;
+  --z-normal: 0;
+  --z-medium: 100;
+  --z-hight: 500;
+  --z-modal: 1000;
+  --font-size: 16px;
+  --padding: 2em;
+  --screen-max: calc(100dvw - var(--scrollbar));
+  --header-height: 75px;
+  @include from(lg) {
+    --header-height: #{get-vw(100px)};
+    --padding: 10%;
+    --font-size: #{get-vw(20px)};
+  }
+  // @include from(xxl) {
+  //   --font-size: 18px;
+  // }
+}

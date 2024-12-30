@@ -1,0 +1,22 @@
+// Configuración y variables globales
+@use 'config/variables';
+
+// Estilos base
+@use 'reset/reset';
+@use 'base/base';
+
+// Layouts
+@use 'layout/layout';
+
+// Componentes
+@use 'components/buttons';
+@use 'components/hamburger';
+@use 'components/scroll';
+@use 'components/header';
+@use 'components/footer';
+@use 'components/menu';
+@use 'components/contactModal';
+
+// Secciones
+@use 'sections/home';
+@use 'sections/contact';

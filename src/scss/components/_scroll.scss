@@ -1,0 +1,52 @@
+@use '../mixins/mixins' as *;
+@use '../functions/functions' as *;
+* {
+  scrollbar-color: red transparent;
+  scrollbar-width: thin;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px !important; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+  // display: none !important; // Ocultar scroll */
+}
+
+// *::-webkit-scrollbar-track {
+//   background: var(--color-body);
+//   border-radius: 20px;
+// }
+
+*::-webkit-scrollbar-thumb {
+  background: lime !important;
+  border-radius: 20px;
+}
+.scroll {
+  // transform: rotate(90deg);
+  // writing-mode: vertical-lr;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 100vh;
+  z-index: 150000;
+  background: red;
+  &__thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20px; //var(--scrollbar);
+    background: lime;
+  }
+}
+.fin {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: lime;
+  text-align: center;
+  font-size: 1.5em;
+}

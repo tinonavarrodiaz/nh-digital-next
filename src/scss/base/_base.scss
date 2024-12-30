@@ -1,0 +1,66 @@
+@use '../mixins/mixins' as *;
+@use '../functions/functions' as *;
+
+html,
+body {
+  width: 100dvw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
+}
+body {
+  // width: calc(100vw - var(--scrollbar));
+  font-family: var(--body-font);
+  background: var(--color-body);
+  font-size: var(--font-size);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  background: var(--header-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: inherit;
+}
+p {
+  margin-bottom: 0.5em;
+  line-height: inherit;
+  &:last-child,
+  &:only-child {
+    margin-bottom: 0;
+  }
+}
+ul,
+ul li {
+  margin-bottom: 0;
+  list-style: none;
+}
+::selection {
+  color: #fff;
+  background: var(--color-accent);
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+// br {
+//   display: none;
+//   @incude from(lg) {
+//     display: block;
+//   }
+// }
+@media screen and (max-width: 1024px) {
+  br {
+    display: none;
+  }
+}
