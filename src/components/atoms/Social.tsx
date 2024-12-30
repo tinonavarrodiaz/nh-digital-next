@@ -11,7 +11,7 @@ interface SocialProps {
 export const Social = ({url,children, className="Social", text}:SocialProps) => {
   return (
     <li className={`${className}__item`}>
-      <a href={url} className={`${className}__link`} target="_blank">
+      <a href={url} className={`${className}__link`} target="_blank" aria-label={`enlace a REDES SOCIALES`}>
         {text&& (<span>{text}</span>)} {children}
       </a>
     </li>
