@@ -30,7 +30,7 @@ const Menu = ({isActive, handleClick, classNameMenu="Menu", classNameNav="Nav"}:
         {
           menu.map(item => (
             <li key={item.id}>
-              <a href={item.path} >{item.title}</a>
+              <a href={item.path} aria-label={`enlace a ${item.title}`} >{item.title}</a>
             </li>
           ))
         }
